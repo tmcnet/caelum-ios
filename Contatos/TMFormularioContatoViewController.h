@@ -18,4 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *endereco;
 @property (weak, nonatomic) IBOutlet UITextField *site;
 
+- (IBAction)proximoCampo:(UITextField *)campoAtual;
+
+@property (strong, atomic) NSMutableArray * contatos;
+
 @end
