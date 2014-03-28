@@ -29,7 +29,9 @@
     self = [super init];
     
     if(self){
-        self.contatos = [[NSMutableArray alloc] init];
+        self.navigationItem.title = @"Cadastro";
+        UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithTitle:@"Adiciona" style:UIBarButtonItemStylePlain target:self action:@selector(criarContato)];
+        self.navigationItem.rightBarButtonItem = btn;
     }
     return self;
 }
@@ -46,30 +48,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pegaDadosDoForm:(id)sender
+- (void)criarContato
 {
- /*
-    -- INSERINDO OBJETOS AO DICTIONARY PELO CONSTRUTOR --
-  
-    NSDictionary *contatos = [[NSDictionary alloc] initWithObjectsAndKeys:self.nome.text, self.telefone.text, self.email.text, self.endereco.text, self.site.text, nil];
-  */
+    TMContato * contato = [self pegaDadosDoFormulario];
+    [self.contatos addObject:contato];
     
-   /*
-    -- INSERINDO OBJETOS NO DICTIONARY pelo setObject --
+    NSLog(@"Contato: %@", self.contatos.description);
     
-    NSMutableDictionary *contatos = [[NSMutableDictionary alloc] init];
-    
-    [contatos setObject:self.nome.text forKey:@"nome"];
-    [contatos setObject:self.telefone.text forKey:@"telefone"];
-    [contatos setObject:self.email.text forKey:@"email"];
-    [contatos setObject:self.endereco.text forKey:@"endereco"];
-    [contatos setObject:self.site.text forKey:@"site"];
-    
-     NSLog(@"Contato adicionado: %@", contatos);
-    */
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (TMContato *)pegaDadosDoFormulario
+{
     
     // CRIADO UM NOVO CONTATO DO TIPO TMContato
+    
     TMContato *contato = [[TMContato alloc] init];
+    
     contato.nome = self.nome.text;
     contato.telefone = self.telefone.text;
     contato.email = self.email.text;
@@ -78,9 +73,7 @@
     
     [self.view endEditing:YES];
     
-    [self.contatos addObject:contato];
-    
-     NSLog(@"Contato: %@", self.contatos.description);
+    return contato;
 }
 
 

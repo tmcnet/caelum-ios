@@ -10,8 +10,6 @@
 
 @interface TMFormularioContatoViewController : UIViewController
 
-- (IBAction)pegaDadosDoForm:(id)sender;
-
 @property (weak, nonatomic) IBOutlet UITextField *nome;
 @property (weak, nonatomic) IBOutlet UITextField *telefone;
 @property (weak, nonatomic) IBOutlet UITextField *email;
@@ -20,6 +18,6 @@
 
 - (IBAction)proximoCampo:(UITextField *)campoAtual;
 
-@property (strong, atomic) NSMutableArray * contatos;
+@property (weak, atomic) NSMutableArray * contatos;
 
 @end

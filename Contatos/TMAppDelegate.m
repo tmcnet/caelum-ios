@@ -8,18 +8,22 @@
 
 #import "TMAppDelegate.h"
 #import "TMFormularioContatoViewController.h"
+#import "TMListaContatoViewController.h"
 
 @implementation TMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.contatos = [[NSMutableArray alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+//    TMFormularioContatoViewController  *form = [[TMFormularioContatoViewController alloc]init];
     
-    
-    TMFormularioContatoViewController  *form = [[TMFormularioContatoViewController alloc]init];
-    self.window.rootViewController = form;
+    TMListaContatoViewController *listaContato = [[TMListaContatoViewController alloc] init];
+    listaContato.contatos = self.contatos;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listaContato];
+    self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

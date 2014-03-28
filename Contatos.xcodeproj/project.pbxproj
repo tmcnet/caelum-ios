@@ -19,6 +19,7 @@
 		AF0F680418E25D95005084EB /* TMFormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0F680218E25D95005084EB /* TMFormularioContatoViewController.m */; };
 		AF0F680518E25D95005084EB /* TMFormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0F680318E25D95005084EB /* TMFormularioContatoViewController.xib */; };
 		AFE63D6A18E38E750012097D /* TMContato.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE63D6918E38E750012097D /* TMContato.m */; };
+		AFF9873918E4E0D300DE6628 /* TMListaContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		AF0F680318E25D95005084EB /* TMFormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMFormularioContatoViewController.xib; sourceTree = "<group>"; };
 		AFE63D6818E38E750012097D /* TMContato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMContato.h; sourceTree = "<group>"; };
 		AFE63D6918E38E750012097D /* TMContato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMContato.m; sourceTree = "<group>"; };
+		AFF9873718E4E0D300DE6628 /* TMListaContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListaContatoViewController.h; sourceTree = "<group>"; };
+		AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMListaContatoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +89,16 @@
 		AF0F67EA18E25919005084EB /* Contatos */ = {
 			isa = PBXGroup;
 			children = (
+				AF0F67EB18E25919005084EB /* Supporting Files */,
 				AF0F67F318E25919005084EB /* TMAppDelegate.h */,
 				AF0F67F418E25919005084EB /* TMAppDelegate.m */,
-				AF0F680118E25D95005084EB /* TMFormularioContatoViewController.h */,
-				AF0F680218E25D95005084EB /* TMFormularioContatoViewController.m */,
 				AFE63D6818E38E750012097D /* TMContato.h */,
 				AFE63D6918E38E750012097D /* TMContato.m */,
+				AF0F680118E25D95005084EB /* TMFormularioContatoViewController.h */,
+				AF0F680218E25D95005084EB /* TMFormularioContatoViewController.m */,
 				AF0F680318E25D95005084EB /* TMFormularioContatoViewController.xib */,
-				AF0F67EB18E25919005084EB /* Supporting Files */,
+				AFF9873718E4E0D300DE6628 /* TMListaContatoViewController.h */,
+				AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */,
 			);
 			path = Contatos;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				AF0F67F518E25919005084EB /* TMAppDelegate.m in Sources */,
 				AF0F680418E25D95005084EB /* TMFormularioContatoViewController.m in Sources */,
 				AFE63D6A18E38E750012097D /* TMContato.m in Sources */,
+				AFF9873918E4E0D300DE6628 /* TMListaContatoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
