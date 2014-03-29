@@ -24,13 +24,26 @@
     return self;
 }
 
+- (id)initWithContato:(TMContato *)contato
+{
+    self = [super init];
+    if(self) {
+        self.contato = contato;
+        self.navigationItem.title = @"Editar Contato";
+        UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithTitle:@"Alterar" style:UIBarButtonItemStylePlain target:self action:@selector(alterarContato)];
+        self.navigationItem.rightBarButtonItem = btn;
+
+    }
+    return self;
+}
+
 - (id) init
 {
     self = [super init];
     
     if(self){
         self.navigationItem.title = @"Cadastro";
-        UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithTitle:@"Adiciona" style:UIBarButtonItemStylePlain target:self action:@selector(criarContato)];
+        UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(criarContato)];
         self.navigationItem.rightBarButtonItem = btn;
     }
     return self;
@@ -39,7 +52,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    if(self.contato) {
+        self.nome.text = self.contato.nome;
+        self.telefone.text = self.contato.telefone;
+        self.email.text = self.contato.email;
+        self.endereco.text = self.contato.endereco;
+        self.site.text = self.contato.site;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,22 +77,28 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)alterarContato
+{
+    [self pegaDadosDoFormulario];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (TMContato *)pegaDadosDoFormulario
 {
-    
+    if(!self.contato) {
+       self.contato = [[TMContato alloc] init];
+    }
     // CRIADO UM NOVO CONTATO DO TIPO TMContato
     
-    TMContato *contato = [[TMContato alloc] init];
-    
-    contato.nome = self.nome.text;
-    contato.telefone = self.telefone.text;
-    contato.email = self.email.text;
-    contato.endereco = self.endereco.text;
-    contato.site = self.site.text;
+    self.contato.nome = self.nome.text;
+    self.contato.telefone = self.telefone.text;
+    self.contato.email = self.email.text;
+    self.contato.endereco = self.endereco.text;
+    self.contato.site = self.site.text;
     
     [self.view endEditing:YES];
     
-    return contato;
+    return self.contato;
 }
 
 

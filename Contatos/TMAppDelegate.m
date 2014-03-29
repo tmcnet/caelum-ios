@@ -14,7 +14,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.contatos = [[NSMutableArray alloc] init];
+    NSArray * docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * docDir = docDirs[0];
+    self.nomeArquivo = [NSString stringWithFormat:@"%@/Contatos", docDir];
+    
+    self.contatos = [NSKeyedUnarchiver unarchiveObjectWithFile:self.nomeArquivo];
+    
+    if(!self.contatos){
+        self.contatos = [[NSMutableArray alloc] init];
+    }
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
@@ -33,6 +42,8 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    [NSKeyedArchiver archiveRootObject:self.contatos toFile:self.nomeArquivo];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application

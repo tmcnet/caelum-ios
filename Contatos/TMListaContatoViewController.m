@@ -22,6 +22,7 @@
         self.navigationItem.title = @"Contatos";
         UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeForm:)];
         self.navigationItem.rightBarButtonItem = btn;
+        self.navigationItem.leftBarButtonItem = self.editButtonItem;
     }
     return self;
 }
@@ -79,7 +80,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    static NSString * cellIdentifier = @"Cell";
+    
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if(!cell) {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
     TMContato * contato = self.contatos[indexPath.row];
     cell.textLabel.text = contato.nome;
     
@@ -101,26 +110,33 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        [self.contatos removeObjectAtIndex:indexPath.row];
+        
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    TMContato * contato = self.contatos[fromIndexPath.row];
+    [self.contatos removeObjectAtIndex:fromIndexPath.row];
+    [self.contatos insertObject:contato atIndex:toIndexPath.row];
+
 }
-*/
+
 
 /*
 // Override to support conditional rearranging of the table view.
@@ -135,13 +151,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    TMContato * contato = self.contatos[indexPath.row];
+    TMFormularioContatoViewController * form = [[TMFormularioContatoViewController alloc] initWithContato: contato];
+    
+    [self.navigationController pushViewController:form animated:YES];
 }
 
 @end

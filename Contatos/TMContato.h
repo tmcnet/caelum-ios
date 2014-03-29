@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TMContato : NSObject
+@interface TMContato : NSObject <NSCoding>
 
 {
     NSString* _nome;

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TMContato.h"
 
 @interface TMFormularioContatoViewController : UIViewController
 
@@ -15,8 +16,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *endereco;
 @property (weak, nonatomic) IBOutlet UITextField *site;
+@property (strong, atomic) TMContato *contato;
 
 - (IBAction)proximoCampo:(UITextField *)campoAtual;
+- (id) initWithContato: (TMContato *)contato;
 
 @property (weak, atomic) NSMutableArray * contatos;
 
