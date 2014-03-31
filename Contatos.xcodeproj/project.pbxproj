@@ -39,6 +39,7 @@
 		AF0F680118E25D95005084EB /* TMFormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMFormularioContatoViewController.h; sourceTree = "<group>"; };
 		AF0F680218E25D95005084EB /* TMFormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMFormularioContatoViewController.m; sourceTree = "<group>"; };
 		AF0F680318E25D95005084EB /* TMFormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMFormularioContatoViewController.xib; sourceTree = "<group>"; };
+		AFA036DA18EA2B5E006D19BD /* TMFormularioContatoViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMFormularioContatoViewControllerDelegate.h; sourceTree = "<group>"; };
 		AFE63D6818E38E750012097D /* TMContato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMContato.h; sourceTree = "<group>"; };
 		AFE63D6918E38E750012097D /* TMContato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMContato.m; sourceTree = "<group>"; };
 		AFF9873718E4E0D300DE6628 /* TMListaContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListaContatoViewController.h; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 				AFE63D6918E38E750012097D /* TMContato.m */,
 				AF0F680118E25D95005084EB /* TMFormularioContatoViewController.h */,
 				AF0F680218E25D95005084EB /* TMFormularioContatoViewController.m */,
+				AFA036DA18EA2B5E006D19BD /* TMFormularioContatoViewControllerDelegate.h */,
 				AF0F680318E25D95005084EB /* TMFormularioContatoViewController.xib */,
 				AFF9873718E4E0D300DE6628 /* TMListaContatoViewController.h */,
 				AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */,

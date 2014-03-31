@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TMContato.h"
+#import "TMFormularioContatoViewControllerDelegate.h"
 
-@interface TMListaContatoViewController : UITableViewController
+@interface TMListaContatoViewController : UITableViewController <TMFormularioContatoViewControllerDelegate>
 
 @property (weak, atomic) NSMutableArray * contatos;
+
+- (void) contatoAdicionado:(TMContato *) contato;
 
 @end

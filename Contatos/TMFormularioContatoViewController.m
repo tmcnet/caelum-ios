@@ -70,9 +70,8 @@
 - (void)criarContato
 {
     TMContato * contato = [self pegaDadosDoFormulario];
-    [self.contatos addObject:contato];
     
-    NSLog(@"Contato: %@", self.contatos.description);
+    [self.delegate contatoAdicionado:contato];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

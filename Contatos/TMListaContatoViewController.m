@@ -30,11 +30,14 @@
 - (void)exibeForm: (id)sender
 {
     TMFormularioContatoViewController *form = [[TMFormularioContatoViewController alloc] init];
-    
-    form.contatos = self.contatos;
-    
+    form.delegate = self;
     [self.navigationController pushViewController:form animated:YES];
 
+}
+
+- (void) contatoAdicionado:(TMContato *)contato
+{
+    [self.contatos addObject:contato];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
