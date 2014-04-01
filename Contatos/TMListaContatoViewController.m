@@ -11,33 +11,24 @@
 #import "TMContato.h"
 
 @interface TMListaContatoViewController ()
-
+{
+    TMContato *contatoSelecionado;
+}
 @end
 
 @implementation TMListaContatoViewController
 
 - (id)init {
     self = [super init];
+    
     if (self) {
+        self.linhaSelecionada = -1;
         self.navigationItem.title = @"Contatos";
         UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeForm:)];
         self.navigationItem.rightBarButtonItem = btn;
         self.navigationItem.leftBarButtonItem = self.editButtonItem;
     }
     return self;
-}
-
-- (void)exibeForm: (id)sender
-{
-    TMFormularioContatoViewController *form = [[TMFormularioContatoViewController alloc] init];
-    form.delegate = self;
-    [self.navigationController pushViewController:form animated:YES];
-
-}
-
-- (void) contatoAdicionado:(TMContato *)contato
-{
-    [self.contatos addObject:contato];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -49,21 +40,95 @@
     return self;
 }
 
+#pragma mark - Cíclos de Vida da View
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    UILongPressGestureRecognizer *gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(exibeMaisAcoes:)];
+    
+    [self.tableView addGestureRecognizer:gesture];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.linhaSelecionada >= 0) {
+        
+        NSIndexPath * indexPath = [NSIndexPath indexPathForRow
+                                   :self.linhaSelecionada inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+        
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+        
+        self.linhaSelecionada = -1;
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Mensagens criadas
+
+- (void)exibeForm: (id)sender
+{
+    TMFormularioContatoViewController *form = [[TMFormularioContatoViewController alloc] init];
+    form.delegate = self;
+    [self.navigationController pushViewController:form animated:YES];
+}
+
+- (void)contatoAdicionado:(TMContato *)contato
+{
+    [self.contatos addObject:contato];
+    self.linhaSelecionada = [self.contatos indexOfObject:contato];
+}
+
+-(void)contatoAlterado:(TMContato *)contato
+{
+    NSLog(@"Contato alterado: @%", contato.nome);
+    self.linhaSelecionada = [self.contatos indexOfObject:contato];
+}
+
+-(void)exibeMaisAcoes:(UIGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        CGPoint ponto = [gesture locationInView:self.tableView];
+        
+        NSIndexPath * ip = [self.tableView indexPathForRowAtPoint:ponto];;
+        contatoSelecionado = self.contatos[ip.row];
+        UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:contatoSelecionado.nome delegate:self cancelButtonTitle:@"Cancela" destructiveButtonTitle:nil otherButtonTitles:@"Ligar", @"Enviar Email", @"Exibir no Mapa", @"Abrir Site", nil];
+        [actionSheet showInView:self.view];
+    }
+}
+
+-(void)ligar
+{
+    NSLog(@"Ligando...");
+    
+}
+
+-(void)enviarEmail
+{
+    NSLog(@"Enviando email...");
+}
+
+-(void)mostrarMapa
+{
+    NSLog(@"Exibindo no mapa...");
+}
+
+-(void)abrirSite
+{
+    NSLog(@"Abrindo o site...");
 }
 
 #pragma mark - Table view data source
@@ -156,8 +221,31 @@
 {
     TMContato * contato = self.contatos[indexPath.row];
     TMFormularioContatoViewController * form = [[TMFormularioContatoViewController alloc] initWithContato: contato];
+    form.delegate = self;
     
     [self.navigationController pushViewController:form animated:YES];
+}
+
+#pragma mark - ActionSheet delegate
+
+- (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            //[self ligar];
+            break;
+        case 1:
+            //[self enviarEmail];
+            break;
+        case 2:
+            //[self mostrarMapa];
+            break;
+        case 3:
+            //[abrirSite]:
+            break;
+        default:
+            break;
+    }
 }
 
 @end

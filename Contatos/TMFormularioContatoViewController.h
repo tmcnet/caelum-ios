@@ -19,8 +19,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *site;
 @property (strong, atomic) TMContato *contato;
 @property (weak, atomic) id<TMFormularioContatoViewControllerDelegate>
-
-
 delegate;
 
 - (IBAction)proximoCampo:(UITextField *)campoAtual;

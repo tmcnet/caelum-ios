@@ -11,5 +11,6 @@
 @protocol TMFormularioContatoViewControllerDelegate <NSObject>
 
 - (void) contatoAdicionado:(TMContato *)contato;
+- (void) contatoAlterado:(TMContato *)contato;
 
 @end

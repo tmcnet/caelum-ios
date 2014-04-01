@@ -78,7 +78,13 @@
 
 - (void)alterarContato
 {
-    [self pegaDadosDoFormulario];
+    TMContato * contato = [self pegaDadosDoFormulario];
+    
+    if ([self.delegate respondsToSelector:@selector(contatoAlterado:)]) {
+         [self.delegate contatoAlterado:contato];
+    }
+   
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

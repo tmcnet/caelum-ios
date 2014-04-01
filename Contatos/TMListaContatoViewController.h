@@ -10,10 +10,10 @@
 #import "TMContato.h"
 #import "TMFormularioContatoViewControllerDelegate.h"
 
-@interface TMListaContatoViewController : UITableViewController <TMFormularioContatoViewControllerDelegate>
+@interface TMListaContatoViewController : UITableViewController <TMFormularioContatoViewControllerDelegate, UIActionSheetDelegate>
 
 @property (weak, atomic) NSMutableArray * contatos;
-
+@property (assign, atomic) NSInteger linhaSelecionada;
 - (void) contatoAdicionado:(TMContato *) contato;
 
 @end
