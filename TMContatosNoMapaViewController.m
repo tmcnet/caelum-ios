@@ -14,6 +14,18 @@
 
 @implementation TMContatosNoMapaViewController
 
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        UIImage * img = [UIImage imageNamed:@"Mapa-Contatos"];
+        UITabBarItem * tabBar = [[UITabBarItem alloc] initWithTitle:@"Mapa" image:img tag:2];
+        self.tabBarItem = tabBar;
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

@@ -27,6 +27,9 @@
         UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeForm:)];
         self.navigationItem.rightBarButtonItem = btn;
         self.navigationItem.leftBarButtonItem = self.editButtonItem;
+        UIImage *img = [UIImage imageNamed:@"lista-contatos"];
+        UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Contatos" image:img tag:1];
+        self.tabBarItem = tabBarItem;
     }
     return self;
 }
@@ -106,7 +109,8 @@
         NSIndexPath * ip = [self.tableView indexPathForRowAtPoint:ponto];
         contatoSelecionado = self.contatos[ip.row];
         UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:contatoSelecionado.nome delegate:self cancelButtonTitle:@"Cancela" destructiveButtonTitle:nil otherButtonTitles:@"Ligar", @"Enviar Email", @"Exibir no Mapa", @"Abrir Site", nil];
-        [actionSheet showInView:self.view];
+//        [actionSheet showInView:self.view];
+        [actionSheet showFromTabBar:self.tabBarItem];
     }
 }
 
