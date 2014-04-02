@@ -58,6 +58,10 @@
         self.email.text = self.contato.email;
         self.endereco.text = self.contato.endereco;
         self.site.text = self.contato.site;
+        
+        if(self.contato.imagem) {
+            [self.botaoFoto setImage:self.contato.imagem forState:UIControlStateNormal];
+        }
     }
 }
 
@@ -101,6 +105,10 @@
     self.contato.endereco = self.endereco.text;
     self.contato.site = self.site.text;
     
+    if(self.botaoFoto.imageView.image) {
+        self.contato.imagem = self.botaoFoto.imageView.image;
+    }
+    
     [self.view endEditing:YES];
     
     return self.contato;
@@ -118,5 +126,29 @@
     } else {
         [campoAtual resignFirstResponder];
     }
+}
+
+- (IBAction)selecionaFoto:(id)sender
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        //NO FINAL DA APOSTILA TEM COMO IMPLEMENTAR A CAMERA
+    } else {
+        UIImagePickerController * picker = [[UIImagePickerController alloc]init];
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.allowsEditing = YES;
+        picker.delegate = self;
+        
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+#pragma mark - UIPickerController delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *imagem = info[UIImagePickerControllerEditedImage];
+    [self.botaoFoto setImage:imagem forState:UIControlStateNormal];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

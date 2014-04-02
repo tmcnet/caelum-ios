@@ -92,43 +92,65 @@
     self.linhaSelecionada = [self.contatos indexOfObject:contato];
 }
 
--(void)contatoAlterado:(TMContato *)contato
+- (void)contatoAlterado:(TMContato *)contato
 {
     NSLog(@"Contato alterado: @%", contato.nome);
     self.linhaSelecionada = [self.contatos indexOfObject:contato];
 }
 
--(void)exibeMaisAcoes:(UIGestureRecognizer *)gesture
+- (void)exibeMaisAcoes:(UIGestureRecognizer *)gesture
 {
     if (gesture.state == UIGestureRecognizerStateBegan) {
         CGPoint ponto = [gesture locationInView:self.tableView];
         
-        NSIndexPath * ip = [self.tableView indexPathForRowAtPoint:ponto];;
+        NSIndexPath * ip = [self.tableView indexPathForRowAtPoint:ponto];
         contatoSelecionado = self.contatos[ip.row];
         UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:contatoSelecionado.nome delegate:self cancelButtonTitle:@"Cancela" destructiveButtonTitle:nil otherButtonTitles:@"Ligar", @"Enviar Email", @"Exibir no Mapa", @"Abrir Site", nil];
         [actionSheet showInView:self.view];
     }
 }
 
--(void)ligar
+- (void)ligar
 {
-    NSLog(@"Ligando...");
+    UIDevice * device = [UIDevice currentDevice];
+    if([device.model isEqualToString:@"iPhone"]){
+        NSString * strURL = [NSString stringWithFormat:@"tel:%@", contatoSelecionado.telefone];
+        [self abrirAplicativoComURL: strURL];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"Pobre" message:@"Compre um iPhone" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
     
 }
 
--(void)enviarEmail
+- (void)enviarEmail
 {
-    NSLog(@"Enviando email...");
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController * mail = [[MFMailComposeViewController alloc] init];
+        
+        [mail setToRecipients:@[contatoSelecionado.email]];
+        [mail setSubject:@"Contatos IP-67"];
+        
+        mail.mailComposeDelegate = self;
+        
+        [self presentViewController:mail animated:YES completion:nil];
+    }
 }
 
--(void)mostrarMapa
+- (void)mostrarMapa
 {
-    NSLog(@"Exibindo no mapa...");
+    NSString * strURL = [[NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", contatoSelecionado.endereco] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    [self abrirAplicativoComURL:strURL];
 }
 
--(void)abrirSite
+- (void)abrirSite
 {
-    NSLog(@"Abrindo o site...");
+    [self abrirAplicativoComURL:contatoSelecionado.site];
+}
+
+- (void)abrirAplicativoComURL:(NSString *) strURL
+{
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:strURL]];
 }
 
 #pragma mark - Table view data source
@@ -232,20 +254,27 @@
 {
     switch (buttonIndex) {
         case 0:
-            //[self ligar];
+            [self ligar];
             break;
         case 1:
-            //[self enviarEmail];
+            [self enviarEmail];
             break;
         case 2:
-            //[self mostrarMapa];
+            [self mostrarMapa];
             break;
         case 3:
-            //[abrirSite]:
+            [self abrirSite];
             break;
         default:
             break;
     }
+}
+
+#pragma mark - MailComposeViewController delegate
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

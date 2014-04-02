@@ -38,6 +38,7 @@
     [aCoder encodeObject:self.email forKey:@"email"];
     [aCoder encodeObject:self.endereco forKey:@"endereco"];
     [aCoder encodeObject:self.site forKey:@"site"];
+    [aCoder encodeObject:self.imagem forKey:@"imagem"];
 }
 
 - (id) initWithCoder:(NSCoder *)aDecoder
@@ -47,9 +48,9 @@
         self.nome = [aDecoder decodeObjectForKey:@"nome"];
         self.telefone = [aDecoder decodeObjectForKey:@"telefone"];
         self.email = [aDecoder decodeObjectForKey:@"email"];
-        
         self.endereco = [aDecoder decodeObjectForKey:@"endereco"];
         self.site = [aDecoder decodeObjectForKey:@"site"];
+        self.imagem = [aDecoder decodeObjectForKey:@"imagem"];
     }
     return self;
 }

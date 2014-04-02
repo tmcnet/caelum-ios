@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "TMContato.h"
 #import "TMFormularioContatoViewControllerDelegate.h"
+#import <MessageUI/MessageUI.h>
 
-@interface TMListaContatoViewController : UITableViewController <TMFormularioContatoViewControllerDelegate, UIActionSheetDelegate>
+@interface TMListaContatoViewController : UITableViewController <TMFormularioContatoViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, atomic) NSMutableArray * contatos;
 @property (assign, atomic) NSInteger linhaSelecionada;

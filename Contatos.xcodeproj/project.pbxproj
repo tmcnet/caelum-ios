@@ -13,12 +13,23 @@
 		AF0F67EF18E25919005084EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF0F67ED18E25919005084EB /* InfoPlist.strings */; };
 		AF0F67F118E25919005084EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0F67F018E25919005084EB /* main.m */; };
 		AF0F67F518E25919005084EB /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0F67F418E25919005084EB /* TMAppDelegate.m */; };
-		AF0F67F718E25919005084EB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF0F67F618E25919005084EB /* Default.png */; };
-		AF0F67F918E25919005084EB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF0F67F818E25919005084EB /* Default@2x.png */; };
 		AF0F67FB18E25919005084EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF0F67FA18E25919005084EB /* Default-568h@2x.png */; };
 		AF0F680418E25D95005084EB /* TMFormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0F680218E25D95005084EB /* TMFormularioContatoViewController.m */; };
 		AF0F680518E25D95005084EB /* TMFormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0F680318E25D95005084EB /* TMFormularioContatoViewController.xib */; };
+		AFA6833818EB992800DDD311 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA6833718EB992800DDD311 /* MapKit.framework */; };
+		AFA6833C18EB9A0000DDD311 /* TMContatosNoMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA6833A18EB9A0000DDD311 /* TMContatosNoMapaViewController.m */; };
+		AFA6833D18EB9A0000DDD311 /* TMContatosNoMapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA6833B18EB9A0000DDD311 /* TMContatosNoMapaViewController.xib */; };
+		AFA6834718EBA0BE00DDD311 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA6833E18EBA0BE00DDD311 /* Default.png */; };
+		AFA6834818EBA0BE00DDD311 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA6833F18EBA0BE00DDD311 /* Default@2x.png */; };
+		AFA6834918EBA0BE00DDD311 /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA6834018EBA0BE00DDD311 /* gps.png */; };
+		AFA6834A18EBA0BE00DDD311 /* gps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA6834118EBA0BE00DDD311 /* gps@2x.png */; };
+		AFA6834B18EBA0BE00DDD311 /* lista-contatos.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA6834218EBA0BE00DDD311 /* lista-contatos.png */; };
+		AFA6834C18EBA0BE00DDD311 /* lista-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA6834318EBA0BE00DDD311 /* lista-contatos@2x.png */; };
+		AFA6834D18EBA0BE00DDD311 /* mapa-contatos.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA6834418EBA0BE00DDD311 /* mapa-contatos.png */; };
+		AFA6834E18EBA0BE00DDD311 /* mapa-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA6834518EBA0BE00DDD311 /* mapa-contatos@2x.png */; };
+		AFA6834F18EBA0BE00DDD311 /* Vila Mariana.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AFA6834618EBA0BE00DDD311 /* Vila Mariana.gpx */; };
 		AFE63D6A18E38E750012097D /* TMContato.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE63D6918E38E750012097D /* TMContato.m */; };
+		AFED1E3218EB79140045BA40 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFED1E3118EB79140045BA40 /* MessageUI.framework */; };
 		AFF9873918E4E0D300DE6628 /* TMListaContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -33,15 +44,27 @@
 		AF0F67F218E25919005084EB /* Contatos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contatos-Prefix.pch"; sourceTree = "<group>"; };
 		AF0F67F318E25919005084EB /* TMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
 		AF0F67F418E25919005084EB /* TMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
-		AF0F67F618E25919005084EB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		AF0F67F818E25919005084EB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AF0F67FA18E25919005084EB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AF0F680118E25D95005084EB /* TMFormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMFormularioContatoViewController.h; sourceTree = "<group>"; };
 		AF0F680218E25D95005084EB /* TMFormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMFormularioContatoViewController.m; sourceTree = "<group>"; };
 		AF0F680318E25D95005084EB /* TMFormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMFormularioContatoViewController.xib; sourceTree = "<group>"; };
 		AFA036DA18EA2B5E006D19BD /* TMFormularioContatoViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMFormularioContatoViewControllerDelegate.h; sourceTree = "<group>"; };
+		AFA6833718EB992800DDD311 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AFA6833918EB9A0000DDD311 /* TMContatosNoMapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMContatosNoMapaViewController.h; path = ../TMContatosNoMapaViewController.h; sourceTree = "<group>"; };
+		AFA6833A18EB9A0000DDD311 /* TMContatosNoMapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMContatosNoMapaViewController.m; path = ../TMContatosNoMapaViewController.m; sourceTree = "<group>"; };
+		AFA6833B18EB9A0000DDD311 /* TMContatosNoMapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TMContatosNoMapaViewController.xib; path = ../TMContatosNoMapaViewController.xib; sourceTree = "<group>"; };
+		AFA6833E18EBA0BE00DDD311 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AFA6833F18EBA0BE00DDD311 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AFA6834018EBA0BE00DDD311 /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps.png; sourceTree = "<group>"; };
+		AFA6834118EBA0BE00DDD311 /* gps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gps@2x.png"; sourceTree = "<group>"; };
+		AFA6834218EBA0BE00DDD311 /* lista-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lista-contatos.png"; sourceTree = "<group>"; };
+		AFA6834318EBA0BE00DDD311 /* lista-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lista-contatos@2x.png"; sourceTree = "<group>"; };
+		AFA6834418EBA0BE00DDD311 /* mapa-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos.png"; sourceTree = "<group>"; };
+		AFA6834518EBA0BE00DDD311 /* mapa-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos@2x.png"; sourceTree = "<group>"; };
+		AFA6834618EBA0BE00DDD311 /* Vila Mariana.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Vila Mariana.gpx"; path = "../Vila Mariana.gpx"; sourceTree = "<group>"; };
 		AFE63D6818E38E750012097D /* TMContato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMContato.h; sourceTree = "<group>"; };
 		AFE63D6918E38E750012097D /* TMContato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMContato.m; sourceTree = "<group>"; };
+		AFED1E3118EB79140045BA40 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AFF9873718E4E0D300DE6628 /* TMListaContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListaContatoViewController.h; sourceTree = "<group>"; };
 		AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMListaContatoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA6833818EB992800DDD311 /* MapKit.framework in Frameworks */,
+				AFED1E3218EB79140045BA40 /* MessageUI.framework in Frameworks */,
 				AF0F67E518E25919005084EB /* UIKit.framework in Frameworks */,
 				AF0F67E718E25919005084EB /* Foundation.framework in Frameworks */,
 				AF0F67E918E25919005084EB /* CoreGraphics.framework in Frameworks */,
@@ -80,6 +105,8 @@
 		AF0F67E318E25919005084EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFA6833718EB992800DDD311 /* MapKit.framework */,
+				AFED1E3118EB79140045BA40 /* MessageUI.framework */,
 				AF0F67E418E25919005084EB /* UIKit.framework */,
 				AF0F67E618E25919005084EB /* Foundation.framework */,
 				AF0F67E818E25919005084EB /* CoreGraphics.framework */,
@@ -90,15 +117,20 @@
 		AF0F67EA18E25919005084EB /* Contatos */ = {
 			isa = PBXGroup;
 			children = (
+				AFA6834618EBA0BE00DDD311 /* Vila Mariana.gpx */,
+				AFA6835018EBA0F500DDD311 /* Images */,
 				AF0F67EB18E25919005084EB /* Supporting Files */,
 				AF0F67F318E25919005084EB /* TMAppDelegate.h */,
 				AF0F67F418E25919005084EB /* TMAppDelegate.m */,
 				AFE63D6818E38E750012097D /* TMContato.h */,
 				AFE63D6918E38E750012097D /* TMContato.m */,
+				AFA6833918EB9A0000DDD311 /* TMContatosNoMapaViewController.h */,
+				AFA6833A18EB9A0000DDD311 /* TMContatosNoMapaViewController.m */,
+				AFA6833B18EB9A0000DDD311 /* TMContatosNoMapaViewController.xib */,
 				AF0F680118E25D95005084EB /* TMFormularioContatoViewController.h */,
 				AF0F680218E25D95005084EB /* TMFormularioContatoViewController.m */,
-				AFA036DA18EA2B5E006D19BD /* TMFormularioContatoViewControllerDelegate.h */,
 				AF0F680318E25D95005084EB /* TMFormularioContatoViewController.xib */,
+				AFA036DA18EA2B5E006D19BD /* TMFormularioContatoViewControllerDelegate.h */,
 				AFF9873718E4E0D300DE6628 /* TMListaContatoViewController.h */,
 				AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */,
 			);
@@ -112,11 +144,25 @@
 				AF0F67ED18E25919005084EB /* InfoPlist.strings */,
 				AF0F67F018E25919005084EB /* main.m */,
 				AF0F67F218E25919005084EB /* Contatos-Prefix.pch */,
-				AF0F67F618E25919005084EB /* Default.png */,
-				AF0F67F818E25919005084EB /* Default@2x.png */,
 				AF0F67FA18E25919005084EB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFA6835018EBA0F500DDD311 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AFA6833E18EBA0BE00DDD311 /* Default.png */,
+				AFA6833F18EBA0BE00DDD311 /* Default@2x.png */,
+				AFA6834018EBA0BE00DDD311 /* gps.png */,
+				AFA6834118EBA0BE00DDD311 /* gps@2x.png */,
+				AFA6834218EBA0BE00DDD311 /* lista-contatos.png */,
+				AFA6834318EBA0BE00DDD311 /* lista-contatos@2x.png */,
+				AFA6834418EBA0BE00DDD311 /* mapa-contatos.png */,
+				AFA6834518EBA0BE00DDD311 /* mapa-contatos@2x.png */,
+			);
+			name = Images;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,10 +218,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0F67EF18E25919005084EB /* InfoPlist.strings in Resources */,
-				AF0F67F718E25919005084EB /* Default.png in Resources */,
-				AF0F67F918E25919005084EB /* Default@2x.png in Resources */,
 				AF0F67FB18E25919005084EB /* Default-568h@2x.png in Resources */,
 				AF0F680518E25D95005084EB /* TMFormularioContatoViewController.xib in Resources */,
+				AFA6833D18EB9A0000DDD311 /* TMContatosNoMapaViewController.xib in Resources */,
+				AFA6834718EBA0BE00DDD311 /* Default.png in Resources */,
+				AFA6834818EBA0BE00DDD311 /* Default@2x.png in Resources */,
+				AFA6834918EBA0BE00DDD311 /* gps.png in Resources */,
+				AFA6834A18EBA0BE00DDD311 /* gps@2x.png in Resources */,
+				AFA6834B18EBA0BE00DDD311 /* lista-contatos.png in Resources */,
+				AFA6834C18EBA0BE00DDD311 /* lista-contatos@2x.png in Resources */,
+				AFA6834D18EBA0BE00DDD311 /* mapa-contatos.png in Resources */,
+				AFA6834E18EBA0BE00DDD311 /* mapa-contatos@2x.png in Resources */,
+				AFA6834F18EBA0BE00DDD311 /* Vila Mariana.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +245,7 @@
 				AF0F680418E25D95005084EB /* TMFormularioContatoViewController.m in Sources */,
 				AFE63D6A18E38E750012097D /* TMContato.m in Sources */,
 				AFF9873918E4E0D300DE6628 /* TMListaContatoViewController.m in Sources */,
+				AFA6833C18EB9A0000DDD311 /* TMContatosNoMapaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

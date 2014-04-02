@@ -32,7 +32,10 @@
     TMListaContatoViewController *listaContato = [[TMListaContatoViewController alloc] init];
     listaContato.contatos = self.contatos;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listaContato];
-    self.window.rootViewController = nav;
+    UITabBarController *tabs = [[UITabBarController alloc] init];
+    TMContatosNoMapaViewController *mapa = [[TMContatosNoMapaViewController alloc] init];
+    tabs.viewControllers = @[nav, mapa];
+    self.window.rootViewController = tabs;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
