@@ -34,7 +34,8 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listaContato];
     UITabBarController *tabs = [[UITabBarController alloc] init];
     TMContatosNoMapaViewController *mapa = [[TMContatosNoMapaViewController alloc] init];
-    tabs.viewControllers = @[nav, mapa];
+    UINavigationController *navMapa = [[UINavigationController alloc] initWithRootViewController:mapa];
+    tabs.viewControllers = @[nav, navMapa];
     self.window.rootViewController = tabs;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

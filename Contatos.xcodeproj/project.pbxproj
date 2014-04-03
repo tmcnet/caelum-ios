@@ -29,6 +29,10 @@
 		AFA6834E18EBA0BE00DDD311 /* mapa-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA6834518EBA0BE00DDD311 /* mapa-contatos@2x.png */; };
 		AFA6834F18EBA0BE00DDD311 /* Vila Mariana.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AFA6834618EBA0BE00DDD311 /* Vila Mariana.gpx */; };
 		AFE63D6A18E38E750012097D /* TMContato.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE63D6918E38E750012097D /* TMContato.m */; };
+		AFEBEEC118ECEB1000D7B2A1 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBEEBA18ECEB1000D7B2A1 /* TPKeyboardAvoidingCollectionView.m */; };
+		AFEBEEC218ECEB1000D7B2A1 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBEEBC18ECEB1000D7B2A1 /* TPKeyboardAvoidingScrollView.m */; };
+		AFEBEEC318ECEB1000D7B2A1 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBEEBE18ECEB1000D7B2A1 /* TPKeyboardAvoidingTableView.m */; };
+		AFEBEEC418ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBEEC018ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		AFED1E3218EB79140045BA40 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFED1E3118EB79140045BA40 /* MessageUI.framework */; };
 		AFF9873918E4E0D300DE6628 /* TMListaContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */; };
 /* End PBXBuildFile section */
@@ -64,6 +68,14 @@
 		AFA6834618EBA0BE00DDD311 /* Vila Mariana.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Vila Mariana.gpx"; path = "../Vila Mariana.gpx"; sourceTree = "<group>"; };
 		AFE63D6818E38E750012097D /* TMContato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMContato.h; sourceTree = "<group>"; };
 		AFE63D6918E38E750012097D /* TMContato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMContato.m; sourceTree = "<group>"; };
+		AFEBEEB918ECEB1000D7B2A1 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		AFEBEEBA18ECEB1000D7B2A1 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		AFEBEEBB18ECEB1000D7B2A1 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		AFEBEEBC18ECEB1000D7B2A1 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		AFEBEEBD18ECEB1000D7B2A1 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		AFEBEEBE18ECEB1000D7B2A1 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		AFEBEEBF18ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		AFEBEEC018ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		AFED1E3118EB79140045BA40 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AFF9873718E4E0D300DE6628 /* TMListaContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListaContatoViewController.h; sourceTree = "<group>"; };
 		AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMListaContatoViewController.m; sourceTree = "<group>"; };
@@ -117,6 +129,7 @@
 		AF0F67EA18E25919005084EB /* Contatos */ = {
 			isa = PBXGroup;
 			children = (
+				AFEBEEB818ECEB1000D7B2A1 /* TPKeyboardAvoiding */,
 				AFA6834618EBA0BE00DDD311 /* Vila Mariana.gpx */,
 				AFA6835018EBA0F500DDD311 /* Images */,
 				AF0F67EB18E25919005084EB /* Supporting Files */,
@@ -163,6 +176,21 @@
 			);
 			name = Images;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		AFEBEEB818ECEB1000D7B2A1 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBEEB918ECEB1000D7B2A1 /* TPKeyboardAvoidingCollectionView.h */,
+				AFEBEEBA18ECEB1000D7B2A1 /* TPKeyboardAvoidingCollectionView.m */,
+				AFEBEEBB18ECEB1000D7B2A1 /* TPKeyboardAvoidingScrollView.h */,
+				AFEBEEBC18ECEB1000D7B2A1 /* TPKeyboardAvoidingScrollView.m */,
+				AFEBEEBD18ECEB1000D7B2A1 /* TPKeyboardAvoidingTableView.h */,
+				AFEBEEBE18ECEB1000D7B2A1 /* TPKeyboardAvoidingTableView.m */,
+				AFEBEEBF18ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				AFEBEEC018ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +274,10 @@
 				AFE63D6A18E38E750012097D /* TMContato.m in Sources */,
 				AFF9873918E4E0D300DE6628 /* TMListaContatoViewController.m in Sources */,
 				AFA6833C18EB9A0000DDD311 /* TMContatosNoMapaViewController.m in Sources */,
+				AFEBEEC118ECEB1000D7B2A1 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				AFEBEEC218ECEB1000D7B2A1 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				AFEBEEC318ECEB1000D7B2A1 /* TPKeyboardAvoidingTableView.m in Sources */,
+				AFEBEEC418ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

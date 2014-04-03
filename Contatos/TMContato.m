@@ -39,6 +39,8 @@
     [aCoder encodeObject:self.endereco forKey:@"endereco"];
     [aCoder encodeObject:self.site forKey:@"site"];
     [aCoder encodeObject:self.imagem forKey:@"imagem"];
+    [aCoder encodeObject:self.latitude forKey:@"latitude"];
+    [aCoder encodeObject:self.longitude forKey:@"longitude"];
 }
 
 - (id) initWithCoder:(NSCoder *)aDecoder
@@ -51,6 +53,8 @@
         self.endereco = [aDecoder decodeObjectForKey:@"endereco"];
         self.site = [aDecoder decodeObjectForKey:@"site"];
         self.imagem = [aDecoder decodeObjectForKey:@"imagem"];
+        self.latitude = [aDecoder decodeObjectForKey:@"latitude"];
+        self.longitude = [aDecoder decodeObjectForKey:@"longitude"];
     }
     return self;
 }

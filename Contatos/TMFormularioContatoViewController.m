@@ -58,6 +58,8 @@
         self.email.text = self.contato.email;
         self.endereco.text = self.contato.endereco;
         self.site.text = self.contato.site;
+        self.latitude.text = [self.contato.latitude stringValue];
+        self.longitude.text = [self.contato.longitude stringValue];
         
         if(self.contato.imagem) {
             [self.botaoFoto setImage:self.contato.imagem forState:UIControlStateNormal];
@@ -104,6 +106,8 @@
     self.contato.email = self.email.text;
     self.contato.endereco = self.endereco.text;
     self.contato.site = self.site.text;
+    self.contato.latitude = [NSNumber numberWithDouble:[self.latitude.text doubleValue]];
+    self.contato.longitude = [NSNumber numberWithDouble:[self.longitude.text doubleValue]];
     
     if(self.botaoFoto.imageView.image) {
         self.contato.imagem = self.botaoFoto.imageView.image;

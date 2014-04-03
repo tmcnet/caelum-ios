@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface TMContatosNoMapaViewController : UIViewController
+
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapa;
 
 @end

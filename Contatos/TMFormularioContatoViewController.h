@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *site;
 @property (weak, nonatomic) IBOutlet UIButton *botaoFoto;
 @property (strong, atomic) TMContato *contato;
+@property (weak, nonatomic) IBOutlet UITextField *latitude;
+@property (weak, nonatomic) IBOutlet UITextField *longitude;
 
 @property (weak, atomic) id<TMFormularioContatoViewControllerDelegate>
 delegate;

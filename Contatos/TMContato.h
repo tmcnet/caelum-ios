@@ -24,5 +24,7 @@
 @property (strong, atomic) NSString * endereco;
 @property (strong, atomic) NSString * site;
 @property (strong, atomic) UIImage * imagem;
+@property (strong, atomic) NSNumber * latitude;
+@property (strong, atomic) NSNumber * longitude;
 
 @end
