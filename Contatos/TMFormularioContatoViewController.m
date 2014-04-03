@@ -146,6 +146,21 @@
     }
 }
 
+- (IBAction)buscarCoordenadas:(id)sender {
+    [self.rodinha startAnimating];
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
+    [geoCoder geocodeAddressString:self.endereco.text completionHandler:^(NSArray *resultados, NSError *erro)
+    {
+        if (!erro && [resultados count] > 0) {
+            CLPlacemark * resultado = resultados[0];
+            CLLocationCoordinate2D coordenada = resultado.location.coordinate;
+            self.latitude.text = [NSString stringWithFormat:@"%f", coordenada.latitude];
+            self.longitude.text = [NSString stringWithFormat:@"%f", coordenada.longitude];
+        }
+        [self.rodinha stopAnimating];
+    }];
+}
+
 #pragma mark - UIPickerController delegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info

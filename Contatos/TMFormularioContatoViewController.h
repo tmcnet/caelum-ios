@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TMContato.h"
 #import "TMFormularioContatoViewControllerDelegate.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface TMFormularioContatoViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -21,12 +22,14 @@
 @property (strong, atomic) TMContato *contato;
 @property (weak, nonatomic) IBOutlet UITextField *latitude;
 @property (weak, nonatomic) IBOutlet UITextField *longitude;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *rodinha;
 
 @property (weak, atomic) id<TMFormularioContatoViewControllerDelegate>
 delegate;
 
 - (IBAction)proximoCampo:(UITextField *)campoAtual;
 - (IBAction)selecionaFoto:(id)sender;
+- (IBAction)buscarCoordenadas:(id)sender;
 
 - (id) initWithContato: (TMContato *)contato;
 

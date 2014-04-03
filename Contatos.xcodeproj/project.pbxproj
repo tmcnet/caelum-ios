@@ -35,6 +35,7 @@
 		AFEBEEC418ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBEEC018ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		AFED1E3218EB79140045BA40 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFED1E3118EB79140045BA40 /* MessageUI.framework */; };
 		AFF9873918E4E0D300DE6628 /* TMListaContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */; };
+		AFFED6B518ECF12A006BB598 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFED6B418ECF12A006BB598 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		AFED1E3118EB79140045BA40 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AFF9873718E4E0D300DE6628 /* TMListaContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListaContatoViewController.h; sourceTree = "<group>"; };
 		AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMListaContatoViewController.m; sourceTree = "<group>"; };
+		AFFED6B418ECF12A006BB598 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFED6B518ECF12A006BB598 /* CoreLocation.framework in Frameworks */,
 				AFA6833818EB992800DDD311 /* MapKit.framework in Frameworks */,
 				AFED1E3218EB79140045BA40 /* MessageUI.framework in Frameworks */,
 				AF0F67E518E25919005084EB /* UIKit.framework in Frameworks */,
@@ -100,6 +103,7 @@
 		AF0F67D818E25919005084EB = {
 			isa = PBXGroup;
 			children = (
+				AFFED6B418ECF12A006BB598 /* CoreLocation.framework */,
 				AF0F67EA18E25919005084EB /* Contatos */,
 				AF0F67E318E25919005084EB /* Frameworks */,
 				AF0F67E218E25919005084EB /* Products */,
