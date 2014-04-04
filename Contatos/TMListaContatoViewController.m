@@ -85,6 +85,7 @@
 - (void)exibeForm: (id)sender
 {
     TMFormularioContatoViewController *form = [[TMFormularioContatoViewController alloc] init];
+    form.managedObjectContext = self.managedObjectContext;
     form.delegate = self;
     [self.navigationController pushViewController:form animated:YES];
 }
@@ -97,7 +98,7 @@
 
 - (void)contatoAlterado:(TMContato *)contato
 {
-    NSLog(@"Contato alterado: @%", contato.nome);
+    NSLog(@"Contato alterado: %@", contato.nome);
     self.linhaSelecionada = [self.contatos indexOfObject:contato];
 }
 
@@ -110,7 +111,7 @@
         contatoSelecionado = self.contatos[ip.row];
         UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:contatoSelecionado.nome delegate:self cancelButtonTitle:@"Cancela" destructiveButtonTitle:nil otherButtonTitles:@"Ligar", @"Enviar Email", @"Exibir no Mapa", @"Abrir Site", nil];
 //        [actionSheet showInView:self.view];
-        [actionSheet showFromTabBar:self.tabBarItem];
+        [actionSheet showFromTabBar:self.tabBarController.tabBar];
     }
 }
 

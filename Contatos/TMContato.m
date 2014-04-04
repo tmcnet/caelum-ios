@@ -9,6 +9,7 @@
 #import "TMContato.h"
 
 @implementation TMContato
+@dynamic nome, telefone, endereco, email, site, latitude, longitude, imagem;
 
 //NAO PRECISA, COMPILADOR GERA A PARTIR DA VERSAO 4.4 
 // @synthesize nome = _nome;
@@ -57,6 +58,21 @@
         self.longitude = [aDecoder decodeObjectForKey:@"longitude"];
     }
     return self;
+}
+
+- (CLLocationCoordinate2D) coordinate
+{
+   return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
+}
+
+- (NSString *) title
+{
+    return self.nome;
+}
+
+- (NSString *) subtitle
+{
+    return self.email;
 }
 
 @end

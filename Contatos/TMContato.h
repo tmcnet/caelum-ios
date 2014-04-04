@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-@interface TMContato : NSObject <NSCoding>
+@interface TMContato : NSManagedObject <NSCoding, MKAnnotation>
 
 {
     NSString* _nome;

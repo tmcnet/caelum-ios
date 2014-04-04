@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *latitude;
 @property (weak, nonatomic) IBOutlet UITextField *longitude;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *rodinha;
+@property (weak, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (weak, atomic) id<TMFormularioContatoViewControllerDelegate>
 delegate;

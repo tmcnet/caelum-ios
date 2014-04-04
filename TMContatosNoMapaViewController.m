@@ -7,6 +7,7 @@
 //
 
 #import "TMContatosNoMapaViewController.h"
+#import "TMContato.h"
 
 @interface TMContatosNoMapaViewController ()
 
@@ -38,6 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.mapa.delegate = self;
     self.navigationItem.title = @"Mapa";
     MKUserTrackingBarButtonItem *btnTracking = [[MKUserTrackingBarButtonItem  alloc] initWithMapView:self.mapa];
     self.navigationItem.leftBarButtonItem = btnTracking;
@@ -47,6 +49,46 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.mapa addAnnotations:self.contatos];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.mapa removeAnnotations:self.contatos];
+}
+
+- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+    
+    static NSString *pool = @"pool";
+    MKPinAnnotationView *pin = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pool];
+    
+    if(!pin) {
+        pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pool];
+    } else {
+        pin.annotation = annotation;
+    }
+    pin.pinColor = MKPinAnnotationColorGreen;
+    pin.canShowCallout = YES;
+    
+    TMContato *contato = (TMContato *) annotation;
+    
+    if(contato.imagem) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+        imageView.image = contato.imagem;
+        pin.leftCalloutAccessoryView = imageView;
+    }
+    
+    return pin;
 }
 
 @end

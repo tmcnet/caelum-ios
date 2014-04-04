@@ -36,6 +36,8 @@
 		AFED1E3218EB79140045BA40 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFED1E3118EB79140045BA40 /* MessageUI.framework */; };
 		AFF9873918E4E0D300DE6628 /* TMListaContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */; };
 		AFFED6B518ECF12A006BB598 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFED6B418ECF12A006BB598 /* CoreLocation.framework */; };
+		AFFED6B718EE311F006BB598 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFED6B618EE311F006BB598 /* CoreData.framework */; };
+		AFFED6BA18EE32DF006BB598 /* Contatos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFFED6B818EE32DF006BB598 /* Contatos.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		AFF9873718E4E0D300DE6628 /* TMListaContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListaContatoViewController.h; sourceTree = "<group>"; };
 		AFF9873818E4E0D300DE6628 /* TMListaContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMListaContatoViewController.m; sourceTree = "<group>"; };
 		AFFED6B418ECF12A006BB598 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AFFED6B618EE311F006BB598 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AFFED6B918EE32DF006BB598 /* Contatos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contatos.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFED6B718EE311F006BB598 /* CoreData.framework in Frameworks */,
 				AFFED6B518ECF12A006BB598 /* CoreLocation.framework in Frameworks */,
 				AFA6833818EB992800DDD311 /* MapKit.framework in Frameworks */,
 				AFED1E3218EB79140045BA40 /* MessageUI.framework in Frameworks */,
@@ -103,7 +108,6 @@
 		AF0F67D818E25919005084EB = {
 			isa = PBXGroup;
 			children = (
-				AFFED6B418ECF12A006BB598 /* CoreLocation.framework */,
 				AF0F67EA18E25919005084EB /* Contatos */,
 				AF0F67E318E25919005084EB /* Frameworks */,
 				AF0F67E218E25919005084EB /* Products */,
@@ -121,6 +125,8 @@
 		AF0F67E318E25919005084EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFFED6B618EE311F006BB598 /* CoreData.framework */,
+				AFFED6B418ECF12A006BB598 /* CoreLocation.framework */,
 				AFA6833718EB992800DDD311 /* MapKit.framework */,
 				AFED1E3118EB79140045BA40 /* MessageUI.framework */,
 				AF0F67E418E25919005084EB /* UIKit.framework */,
@@ -133,6 +139,7 @@
 		AF0F67EA18E25919005084EB /* Contatos */ = {
 			isa = PBXGroup;
 			children = (
+				AFFED6BB18EE32FA006BB598 /* Models */,
 				AFEBEEB818ECEB1000D7B2A1 /* TPKeyboardAvoiding */,
 				AFA6834618EBA0BE00DDD311 /* Vila Mariana.gpx */,
 				AFA6835018EBA0F500DDD311 /* Images */,
@@ -195,6 +202,14 @@
 				AFEBEEC018ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
 			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		AFFED6BB18EE32FA006BB598 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFFED6B818EE32DF006BB598 /* Contatos.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +297,7 @@
 				AFEBEEC218ECEB1000D7B2A1 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				AFEBEEC318ECEB1000D7B2A1 /* TPKeyboardAvoidingTableView.m in Sources */,
 				AFEBEEC418ECEB1000D7B2A1 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				AFFED6BA18EE32DF006BB598 /* Contatos.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +415,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFFED6B818EE32DF006BB598 /* Contatos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFFED6B918EE32DF006BB598 /* Contatos.xcdatamodel */,
+			);
+			currentVersion = AFFED6B918EE32DF006BB598 /* Contatos.xcdatamodel */;
+			path = Contatos.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AF0F67D918E25919005084EB /* Project object */;
 }

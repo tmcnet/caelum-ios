@@ -97,7 +97,7 @@
 - (TMContato *)pegaDadosDoFormulario
 {
     if(!self.contato) {
-       self.contato = [[TMContato alloc] init];
+        self.contato = [NSEntityDescription insertNewObjectForEntityForName:@"Contato" inManagedObjectContext:self.managedObjectContext];
     }
     // CRIADO UM NOVO CONTATO DO TIPO TMContato
     
